@@ -1,6 +1,7 @@
 'use client';
 
 import * as React from 'react';
+import '@rainbow-me/rainbowkit/styles.css';
 import {
   RainbowKitProvider,
   darkTheme,
@@ -11,7 +12,7 @@ import { config } from '../wagmi';
 
 const queryClient = new QueryClient();
 
-export function Providers({ children }) {
+export default function Providers({ children }) {
   return (
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
